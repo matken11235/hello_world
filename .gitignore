@@ -1,0 +1,11 @@
+#
+# poac
+#
+_build
+deps
+poac.lock
+
+#
+# Intellij IDEA
+#
+.idea
