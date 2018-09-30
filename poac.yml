@@ -11,8 +11,3 @@ license: MIT
 links:
   github: https://github.com/matken11235/hello_world
 
-deps:
-  boostorg/test:
-    src: github
-    tag: boost-1.67.0
-    build: cmake
