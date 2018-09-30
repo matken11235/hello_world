@@ -1,11 +1,10 @@
 #
 # poac
 #
-_build
 deps
-poac.lock
+_build
 
 #
-# Intellij IDEA
+# CLion
 #
 .idea
