@@ -1,5 +1,5 @@
 name: hello_world
-version: 0.0.1
+version: 0.1.0
 cpp_version: 17
 compilers:
   - clang: "6 <= v <= 7"
