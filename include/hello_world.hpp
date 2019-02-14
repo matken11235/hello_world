@@ -54,11 +54,11 @@ namespace hello_world {
     	};
     };
 
-    template <int N>
+    template <int N=HWLEN>
     using hello = tuple_to_array< typename range<_int<N>>::type >;
 
     static void say() {
-        constexpr auto a = hello_world::hello<HWLEN>::world;
+        constexpr auto a = hello::world;
         std::for_each(a.begin(), a.end(), [](char n) { std::cout << n; });
     }
 } // end hello_world namespace
