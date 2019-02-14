@@ -58,7 +58,7 @@ namespace hello_world {
     using hello = tuple_to_array< typename range<_int<N>>::type >;
 
     static void say() {
-        constexpr auto a = hello::world;
+        constexpr auto a = hello<>::world;
         std::for_each(a.begin(), a.end(), [](char n) { std::cout << n; });
     }
 } // end hello_world namespace
