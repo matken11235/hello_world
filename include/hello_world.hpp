@@ -1,8 +1,6 @@
 #ifndef __HELLO_WORLD_HPP__
 #define __HELLO_WORLD_HPP__
 
-#include <tuple>
-#include <array>
 #include <utility>
 #include <type_traits>
 #include <algorithm>
@@ -25,7 +23,7 @@ namespace hello_world {
     void say_impl1(std::index_sequence<Seq...>) {
         (std::cout << ... << say_impl2(std::make_index_sequence<Seq>{})) << std::endl;
     }
-    template <int N=std::extent_v<decltype(diff)>>
+    template <std::size_t N=std::extent_v<decltype(diff)>>
     void say() {
         say_impl1(std::make_index_sequence<N>{});
     }
