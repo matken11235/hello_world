@@ -9,9 +9,7 @@
 
 
 namespace hello_world {
-    static constexpr int HWLEN = 13;
-
-    static constexpr unsigned int diff[HWLEN] = {
+    static constexpr unsigned int diff[] = {
         0b00011101, 0000000007, 0x9^0b1001,
         0x00000003, 0xffffffbd, 0xfffffff4,
         0000000127, 0xfffffff8, 0x00000003,
@@ -27,7 +25,7 @@ namespace hello_world {
     void say_impl1(std::index_sequence<Seq...>) {
         (std::cout << ... << say_impl2(std::make_index_sequence<Seq>{})) << std::endl;
     }
-    template <int N=HWLEN>
+    template <int N=std::extent_v<decltype(diff)>>
     void say() {
         say_impl1(std::make_index_sequence<N>{});
     }
