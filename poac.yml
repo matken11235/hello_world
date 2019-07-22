@@ -1,13 +1,2 @@
-name: hello_world
-version: 0.1.0
 cpp_version: 17
-compilers:
-  - clang: "6 <= v <= 7"
-  - gcc: "7.3.0 <= v <= 8.1.0"
-description: "Compile time hello world library"
-owners:
-  - matken11235
-license: MIT
-links:
-  github: https://github.com/matken11235/hello_world
 
